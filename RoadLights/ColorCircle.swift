@@ -13,8 +13,8 @@ struct ColorCircle: View {
         Circle()
             .foregroundColor(color)
             .frame(width: 100, height: 100)
-            .overlay(Circle().stroke(Color.white, lineWidth: 4))
-            .shadow(radius: 10)
+            .overlay(Circle().stroke(Color.gray, lineWidth: 5))
+            .shadow(color: .white, radius: 5)
             .padding()
     }
 }

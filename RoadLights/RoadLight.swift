@@ -9,22 +9,24 @@ import SwiftUI
 
 struct RoadLight: View {
     var body: some View {
-        VStack {
-            ColorCircle(color: lights[.red]!.rawColor)
-            ColorCircle(color: lights[.yellow]!.rawColor)
-            ColorCircle(color: lights[.green]!.rawColor)
-            Spacer()
-            Button(action: buttonPressed, label: {
-                Text(textButton)
-                    .font(.title)
-            })
+        ZStack {
+            Color(.black)
+            VStack {
+                ColorCircle(color: lights[.red]!.rawColor)
+                ColorCircle(color: lights[.yellow]!.rawColor)
+                ColorCircle(color: lights[.green]!.rawColor)
+                Spacer()
+                Button(action: buttonPressed, label: {
+                    Text(textButton)
+                        .font(.title)
+                })
+            }
+            .padding()
         }
-        .padding()
     }
     
     @State private var textButton = "Start"
     @State private var currentLightColor: Lights = .none
-    
     @State private var lights: [Lights: Light] = [
         .red: Light(color: .red, isOn: false),
         .yellow: Light(color: .yellow, isOn: false),
@@ -37,28 +39,23 @@ struct RoadLight: View {
     }
     
     private func changeLight() {
-        setLightsOff()
-        
         switch currentLightColor {
         case .red: currentLightColor = .yellow
         case .yellow: currentLightColor = .green
         case .green: currentLightColor = .red
         case .none: currentLightColor = .red
         }
-        
+    
         setLights()
-        
     }
     
     private func setLights() {
         for key in lights.keys {
-            lights[key]?.isOn = false
-        }
-    }
-    
-    private func setLightsOff() {
-        for key in lights.keys {
-            lights[key]?.isOn = false
+            if lights[key]?.color == currentLightColor {
+                lights[key]?.isOn = true
+            } else {
+                lights[key]?.isOn = false
+            }
         }
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ColorCircle: View {
-    let color: Color
+    let color: Color?
     var body: some View {
         Circle()
             .foregroundColor(color)

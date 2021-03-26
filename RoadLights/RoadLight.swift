@@ -12,13 +12,20 @@ struct RoadLight: View {
         ZStack {
             Color(.black)
             VStack {
-                ColorCircle(color: lights[.red]!.rawColor)
-                ColorCircle(color: lights[.yellow]!.rawColor)
-                ColorCircle(color: lights[.green]!.rawColor)
+                ColorCircle(color: lights[.red]?.rawColor)
+                ColorCircle(color: lights[.yellow]?.rawColor)
+                ColorCircle(color: lights[.green]?.rawColor)
                 Spacer()
                 Button(action: buttonPressed, label: {
-                    Text(textButton)
-                        .font(.title)
+                    ZStack {
+                        Color(#colorLiteral(red: 0, green: 0.3285208941, blue: 0.5748849511, alpha: 1))
+                            .frame(width: 150, height: 60)
+                            .cornerRadius(15)
+                        Text(textButton)
+                            .font(.largeTitle)
+                            .bold()
+                            .foregroundColor(.white)
+                    }
                 })
             }
             .padding()
@@ -68,7 +75,6 @@ enum Lights {
 }
 
 struct Light {
-
     let color: Lights
     var isOn: Bool
     
@@ -77,7 +83,7 @@ struct Light {
         case .red: return isOn ? Color(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)) : Color(#colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1))
         case .yellow: return isOn ? Color(#colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1)) : Color(#colorLiteral(red: 0.5738074183, green: 0.5655357838, blue: 0, alpha: 1))
         case .green: return isOn ? Color(#colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)) : Color(#colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 1))
-        case .none: return .white
+        case .none: return .black
         }
     }
 }

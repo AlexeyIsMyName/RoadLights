@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		E7D2CF0C260DEC4400704A2B /* RoadLightsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D2CF0B260DEC4400704A2B /* RoadLightsApp.swift */; };
-		E7D2CF0E260DEC4400704A2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D2CF0D260DEC4400704A2B /* ContentView.swift */; };
 		E7D2CF10260DEC4500704A2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D2CF0F260DEC4500704A2B /* Assets.xcassets */; };
 		E7D2CF13260DEC4500704A2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D2CF12260DEC4500704A2B /* Preview Assets.xcassets */; };
+		E7D2CF1D260DEF8100704A2B /* ColorCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D2CF1C260DEF8100704A2B /* ColorCircle.swift */; };
+		E7D2CF20260DF00E00704A2B /* RoadLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D2CF1F260DF00E00704A2B /* RoadLight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E7D2CF08260DEC4400704A2B /* RoadLights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadLights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D2CF0B260DEC4400704A2B /* RoadLightsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadLightsApp.swift; sourceTree = "<group>"; };
-		E7D2CF0D260DEC4400704A2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7D2CF0F260DEC4500704A2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7D2CF12260DEC4500704A2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7D2CF14260DEC4500704A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7D2CF1C260DEF8100704A2B /* ColorCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircle.swift; sourceTree = "<group>"; };
+		E7D2CF1F260DF00E00704A2B /* RoadLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadLight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				E7D2CF0B260DEC4400704A2B /* RoadLightsApp.swift */,
-				E7D2CF0D260DEC4400704A2B /* ContentView.swift */,
+				E7D2CF1C260DEF8100704A2B /* ColorCircle.swift */,
+				E7D2CF1F260DF00E00704A2B /* RoadLight.swift */,
 				E7D2CF0F260DEC4500704A2B /* Assets.xcassets */,
 				E7D2CF14260DEC4500704A2B /* Info.plist */,
 				E7D2CF11260DEC4500704A2B /* Preview Content */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7D2CF0E260DEC4400704A2B /* ContentView.swift in Sources */,
+				E7D2CF20260DF00E00704A2B /* RoadLight.swift in Sources */,
 				E7D2CF0C260DEC4400704A2B /* RoadLightsApp.swift in Sources */,
+				E7D2CF1D260DEF8100704A2B /* ColorCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
